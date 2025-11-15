@@ -1,6 +1,6 @@
 package com.telusko.springsecdemo.controller;
 
-import com.telusko.springsecdemo.Student;
+import com.telusko.springsecdemo.model.Student;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;

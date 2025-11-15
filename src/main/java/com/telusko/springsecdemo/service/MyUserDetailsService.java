@@ -2,6 +2,7 @@ package com.telusko.springsecdemo.service;
 
 import com.telusko.springsecdemo.dao.UserRepo;
 import com.telusko.springsecdemo.model.User;
+import com.telusko.springsecdemo.model.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -22,6 +23,6 @@ public class MyUserDetailsService implements UserDetailsService {
             System.out.println("User 404");
             throw new UsernameNotFoundException("User 404");
         }
-        return null;
+        return new UserPrincipal(user);
     }
 }
